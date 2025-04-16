@@ -7,5 +7,5 @@ jobs:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
       with:
-          node-version: '8'
+        node-version: '8'
     - run: echo "build is done"
