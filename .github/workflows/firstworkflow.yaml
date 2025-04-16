@@ -9,7 +9,7 @@ jobs:
        
       - uses: actions/setup-node@v4     
         with:
-          node-version: '10s'
+          node-version: '16'
       - name: install dependencies
         run: npm install
       - run: |
