@@ -4,11 +4,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      # - run: echo "Triggered by: ${{ github.event_name }} https://github.com/Dc-github25/Dc-repo.git"
-      - uses: actions/setup-node@v4
+      # - uses: actions/checkout@v4
+      - name: cloning Code
+      - run: git clone https://github.com/Dc-github25/Dc-repo.git
+      - uses: actions/setup-node@v4     
         with:
           node-version: '8'
-      - run: |
-          echo "build is done"
-          echo "Triggered by: ${{ github.rerepository}}"
+      - name: install dependencies
+      - run: npm ci
+      - run: echo "build is done"
+         
