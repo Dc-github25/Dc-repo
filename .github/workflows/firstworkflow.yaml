@@ -11,4 +11,4 @@ jobs:
           node-version: '8'
       - run: |
           echo "build is done"
-          echo "Triggered by: ${{ github.rerepository}}
+          echo "Triggered by: ${{ github.rerepository}}"
