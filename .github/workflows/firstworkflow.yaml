@@ -6,8 +6,8 @@ jobs:
     steps:
       - name: cloning Code
         run: git clone https://github.com/Dc-github25/Dc-repo.git
-        with:
-          token: 251095RAGHAV
+        env:
+          GITHUB_TOKEN: 251095RAGHAV
       - uses: actions/setup-node@v4     
         with:
           node-version: '8'
