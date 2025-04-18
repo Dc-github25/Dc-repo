@@ -4,8 +4,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: cloning Code
-        run: git clone https://github.com/${{github.repository}}.git
+      # - name: cloning Code
+      #   run: git clone https://github.com/${{github.repository}}.git
+      - name: Checkout code
+        uses: actions/checkout@v3
        
       - uses: actions/setup-node@v4     
         with:
