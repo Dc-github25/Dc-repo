@@ -19,7 +19,7 @@ jobs:
          echo "build is done"
          echo ${{ github.repository }}
       - name: Install Angular CLI
-        run: npm install -g @angular/cli@8.3.21
+        run: npm install -g @angular/cli@8.3.29
       - run : ng build --prod
       - uses: actions/upload-artifact@v4
         with:
