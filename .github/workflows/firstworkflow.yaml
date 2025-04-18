@@ -12,7 +12,8 @@ jobs:
           node-version: '16'
       - name: install dependencies
         run: npm install -f
-      - run: |
+      - name: check build
+        run: |
          echo "build is done"
          echo ${{ github.repository }}
       - name: Install Angular CLI
