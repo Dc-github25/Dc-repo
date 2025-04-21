@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-//import { BrowserAnimationsModule } from '@angular/platform-browser/animation'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
@@ -18,7 +18,7 @@ import { DragableDesignationComponent } from './dragable-designation.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    //BrowserAnimationsModule,
+    BrowserAnimationsModule,
     MatDialogModule,
     MatButtonModule,
     MatExpansionModule

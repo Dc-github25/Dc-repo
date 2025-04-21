@@ -23,6 +23,15 @@ jobs:
       - run : ng build --prod
       - uses: actions/upload-artifact@v4
         with:
-          name: my-artifact
+          name: my-artifactdemo
           path: dist
+    deploy:
+      needs: build
+      runs-on: ubuntu-latest
+      steps:
+        - name: download artifact
+          uses: actions/download-artifact@v4
+          with:
+            name: my-artifactdemo
+          
          

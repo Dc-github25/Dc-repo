@@ -16,9 +16,6 @@ export class AppComponent {
 
   DragableDesignation(): void {
     const dialogRef = this.dialog.open(DragableDesignationComponent, {
-        width: '400px',
-        height: '300px',
-        panelClass: 'custom-dialog-container'
     });
 
     dialogRef.afterClosed().subscribe(result => {

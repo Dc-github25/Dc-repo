@@ -1,9 +1,12 @@
-<!-- <div class="dialog-container">
-    <h2 mat-dialog-title>Resizable Dialog</h2>
-    <mat-dialog-content>
-      <p>Drag the corner to resize me.</p>
-    </mat-dialog-content>
-    <mat-dialog-actions>
-      <button mat-button mat-dialog-close>Close</button>
-    </mat-dialog-actions>
-  </div> -->
+<div class="dialog-container" [ngClass]="{'minimized': isMinimized}">
+    <div class="dialog-header">
+      <h2>Dialog Title</h2>
+      <button (click)="toggleMinimize()" class="btn minimize-btn">_</button>
+      <button (click)="toggleMaximize()" class="btn maximize-btn">[]</button>
+      <button (click)="close()" class="btn close-btn">X</button>
+    </div>
+  
+    <div class="dialog-content">
+      <p>This is the dialog content. You can put any content here.</p>
+    </div>
+  </div>
