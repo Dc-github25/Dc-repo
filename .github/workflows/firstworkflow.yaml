@@ -32,6 +32,6 @@ jobs:
       - name: download artifact
         uses: actions/download-artifact@v4
         with:
-          - name: my-artifactdemo
+          name: my-artifactdemo
           
          
