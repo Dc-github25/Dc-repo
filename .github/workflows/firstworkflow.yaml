@@ -33,5 +33,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: my-artifactdemo
+      - name: deploy to github pages
+        uses: actions/deploy-pages@v4
           
          
