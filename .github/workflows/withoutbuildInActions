@@ -1,0 +1,44 @@
+name: withoutBuildInActions
+on: [push,workflow_dispatch]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # - name: cloning Code
+      #   run: git clone https://github.com/${{github.repository}}.git
+      # - name: Checkout code
+      #   uses: actions/checkout@v3
+       
+      - uses: actions/setup-node@v4     
+        with:
+          node-version: '16'
+          
+      - name: cloning Code
+        run: git clone https://github.com/${{github.repository}}.git
+
+      - name: install dependencies
+        run: npm install -f
+      
+      - name: Install Angular CLI
+        run: npm install -g @angular/cli@10.0.2
+      - run : ng build --prod
+      - uses: actions/upload-pages-artifact@v3
+        id: deployment
+        with:
+          name: github-pages
+          path: dist
+  # deploy:
+  #   needs: build
+  #   permissions:
+  #     pages: write      
+  #     id-token: write
+  #   environment:
+  #     name: github-pages
+  #     url: ${{ steps.deployment.outputs.page_url }}
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: deploy to github pages
+  #       id: deployment
+  #       uses: actions/deploy-pages@v4
+          
+         
