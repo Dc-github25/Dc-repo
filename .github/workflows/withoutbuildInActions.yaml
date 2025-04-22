@@ -1,4 +1,4 @@
-name: withoutBuildInActions
+name: without BuildIn Actions
 on: [push,workflow_dispatch]
 jobs:
   build:
@@ -12,7 +12,7 @@ jobs:
       - uses: actions/setup-node@v4     
         with:
           node-version: '16'
-          
+
       - name: cloning Code
         run: git clone https://github.com/${{github.repository}}.git
 
